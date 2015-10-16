@@ -1,0 +1,24 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-16 15:52:20
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 15:57:51
+**************************************************************/
+
+class BaseUserCompanyDataTimelineTemplate extends BaseUserDataTimelineTemplate {
+
+	public _viewClassName = 'BaseUserCompanyDataTemplateTimelineView';
+	public _type = 'BaseUserCompany';
+
+	public onListen : function () {
+		var dispatcher = _super();
+
+		return dispatcher;
+	}
+
+}
