@@ -1,0 +1,20 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-16 15:53:08
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 15:59:26
+**************************************************************/
+
+class BaseUserCompanyDataViewTemplate extends BaseUserDataViewTemplate {
+
+	public _serviceName = 'baseusercompany_data_main_service';
+	public _viewClassName = 'BaseUserCompanyDataTemplateViewView';
+	public _type = 'BaseUserCompany';
+	public _route = 'baseusercompany';
+
+}

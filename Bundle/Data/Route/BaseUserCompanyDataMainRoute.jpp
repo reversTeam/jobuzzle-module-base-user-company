@@ -1,0 +1,24 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-10-16 15:45:41
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 15:47:24
+**************************************************************/
+
+class BaseUserCompanyDataMainRoute extends BaseUserDataMainRoute {
+
+	name = 'baseusercompany';
+
+	baseName = 'BaseUserCompany';
+	baseRoute = '{baseusercompanies}';
+	baseController = 'baseusercompany_data_main_controller';
+
+	paramName = 'baseusercompany_url';
+	paramRegex = '[a-z0-9-]+';
+
+}
