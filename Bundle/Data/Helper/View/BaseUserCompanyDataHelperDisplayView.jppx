@@ -1,0 +1,90 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-11-05 23:15:06
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-05 23:30:31
+**************************************************************/
+
+class BaseUserCompanyDataHelperDisplayView extends MasterHelperView {
+
+	public _collectionName = 'BaseUserCompany';
+	public _routeForApi = 'baseusercompany';
+
+	initialState : function () {
+		var states = {};
+
+		states['entities'] = this.getEntities();
+
+		return states;
+	}
+
+	getEntities = function () {
+		var self = this;
+		var store = serviceLocator.get('ServiceManager').get('store_manager_main_service');
+		var router = serviceLocator.get('Router');
+		var collection = store.getAll(this.getCollectionName());
+		var entity = this._template.getEntity();
+		var me = store.getMe();
+		var entities = collection.filterByParentEntityRoute(entity);
+		var keys = Object.keys(entities);
+
+		if (!keys.length || (keys.length == 1 && me.getId() == entities[keys[0]].getId())) {
+			var self = this;
+			store.request(router.entityRouteForApi(entity, this.getRouteForApi()), {}, function (datas) {
+				entities = collection.filterByParentEntityRoute(entity);
+				self._template.setReady(true);
+				self.setState({
+					'entities' : entities
+				})
+			});
+		} else
+			this._template.setReady(true);
+
+		return entities;
+	}
+
+	displayEntities : function (entities) {
+		var self = this;
+		var keys = Object.keys(entities);
+		var entity = this._template.getEntity();
+
+		return keys.map(function (i) {
+			return <div className="baseusercompany">
+				{ entities[i].displayTimeline() }
+			</div>
+		});
+	}
+ 
+	display : function () {
+		var entities = this.state['entities'];
+
+		return <div>
+			{this.displayEntities(entities)}
+		</div>
+	}
+
+	public getCollectionName : function () {
+		return this['_collectionName'];
+	}
+
+	public setCollectionName : function (collectionName) {
+		this['_collectionName'] = collectionName;
+
+		return this;
+	}
+
+	public getRouteForApi : function () {
+		return this['_routeForApi'];
+	}
+
+	public setRouteForApi : function (routeForApi) {
+		this['_routeForApi'] = routeForApi;
+
+		return this;
+	}
+}
