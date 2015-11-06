@@ -1,0 +1,54 @@
+/**************************************************************
+*     ####         #                               #          * Jobuzzle - Copyright All rights reserved
+*     ####         #                               #          *
+*       ##  #####  ######  #     # ####### ####### #  #####   * @Author: revers
+*       ## #     # #     # #     #      #       #  # #     #  *
+*       ## #     # #     # #     #     #       #   # #     #  * @Date:   2015-11-05 23:13:52
+*       ## #     # #     # #     #    #       #    # #     #  *
+*       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
+*  ####### #     # #     # #     #  #       #      # #        *
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-05 23:14:27
+**************************************************************/
+
+class BaseUserCompanyDataDisplayHelper extends MasterHelper {
+
+	_viewClassName = 'BaseUserCompanyDataHelperDisplayView';
+	_hasLoader = true;
+
+	initialize : function () {
+		_super();
+		this['_entity'] = undefined;
+		this['_limit'] = undefined;
+		this['_parent'] = undefined;
+	}
+
+	public getParent : function () {
+		return this['_parent'];
+	}
+
+	public setParent : function (parent) {
+		this['_parent'] = parent;
+
+		return this;
+	}
+
+	public getLimit : function () {
+		return this['_limit'];
+	}
+
+	public setLimit : function (limit) {
+		this['_limit'] = limit;
+
+		return this;
+	}
+
+	public getEntity : function () {
+		return this['_entity'];
+	}
+
+	public setEntity : function (entity) {
+		this['_entity'] = entity;
+
+		return this.entity;
+	}
+}
