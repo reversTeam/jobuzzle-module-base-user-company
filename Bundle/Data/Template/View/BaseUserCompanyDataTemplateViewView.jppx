@@ -7,35 +7,11 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-05 15:58:21
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-08 02:19:09
 **************************************************************/
 
 class BaseUserCompanyDataTemplateViewView extends BaseUserDataTemplateViewView {
 
 	public _class = 'baseusercompany';
 	public _elementType = 'BaseUserCompany';
-
-	public display : function () {
-		var router = serviceLocator.get('Router');
-		var entity = this.state['entity'];
-		var picture = '';
-		var style = {};
-
-		if (!entity)
-			return (<div>Student not loaded</div>);
-		else if (entity.getPicture() != undefined)
-			picture = this.getUrlAsset(entity.getPicture());
-		style['backgroundImage'] = 'url("'+ picture +'")'; 
-		return <div className="student view">
-			<div className="container">
-				<div className="actions">
-					<i className="fa fa-pencil" data-url={this.getUrlEdit()} onClick={this.link}></i>
-				</div>
-				<div className="picture" style={style}></div>
-				<div className="nameProfile">
-					{entity.getFirstname() +' '+ entity.getLastname()}
-				</div>
-			</div>
-		</div>;
-	}
 }
