@@ -7,9 +7,15 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-10-16 15:03:51
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:10:37
 ###############################################################
 
-BaseUserCompanies: 'Professional Users'
-view: '{{url}}'
-update: '{{url}}'
+page:
+	title:
+		BaseUserCompanies: 'Professional Users'
+		view: '{{url}}'
+		update: '{{url}}'
+
+view:
+	actions:
+		edit: Edit user
