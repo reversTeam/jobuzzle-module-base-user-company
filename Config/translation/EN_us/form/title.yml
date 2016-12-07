@@ -7,10 +7,11 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-10-16 15:04:41
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:02:16
 ###############################################################
 
 baseusercompany:
 	create: 'Create professional user'
 	edit : 'Edit a professional user'
 	search : 'Search professional user'
+	delete: Delete professional user

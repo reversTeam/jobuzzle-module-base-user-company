@@ -7,10 +7,15 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 16:24:57
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 13:03:05
 **************************************************************/
 
 class BaseUserCompanyDataTemplateTimelineView extends BaseUserDataTemplateTimelineView {
 
+	public getClassElement : function () {
+		var classElement = _super();
+		classElement.push('baseusercompany');
+		return classElement;
+	}
 
 }

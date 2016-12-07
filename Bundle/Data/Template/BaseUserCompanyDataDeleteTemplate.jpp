@@ -7,13 +7,13 @@
 *       ## #     # #     # #     #    #       #    # #     #  *
 *       ## #     # #     # #     #   #       #     # ######   * @Last Modified by:   revers
 *  ####### #     # #     # #     #  #       #      # #        *
-*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-10-16 15:54:39
+*  ######   #####   ######  #####  ####### ####### # #######  * @Last Modified time: 2015-11-21 15:30:02
 **************************************************************/
 
 class BaseUserCompanyDataDeleteTemplate extends BaseUserDataDeleteTemplate {
 
-	_viewClassName = 'BaseUserCompanyDataTemplateDeleteView';
-	_type = 'BaseUserCompany';
-	_route = 'baseusercompany';
+	public _viewClassName = 'BaseUserCompanyDataTemplateDeleteView';
+	public _type = 'BaseUserCompany';
+	public _serviceName = 'baseusercompany_data_main_service';
 
 }

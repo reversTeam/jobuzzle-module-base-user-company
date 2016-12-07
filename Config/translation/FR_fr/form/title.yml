@@ -7,10 +7,10 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-10-16 15:05:08
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:00:24
 ###############################################################
 
 baseusercompany:
-	create: 'Créer un utilisateur professionel'
-	edit : 'Editer un utilisateur professionel'
-	search : 'Rechercher des utilisateurs professionel'
+	create: 'Créer un utilisateur professionnel'
+	edit : 'Editer un utilisateur professionnel'
+	search : 'Rechercher des utilisateurs professionnel'

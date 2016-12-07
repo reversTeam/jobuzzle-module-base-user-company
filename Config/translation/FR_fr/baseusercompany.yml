@@ -7,15 +7,16 @@
 #       ## #     # #     # #     #    #       #    # #     #  #
 #       ## #     # #     # #     #   #       #     # ######   # @Last Modified by:   revers
 #  ####### #     # #     # #     #  #       #      # #        #
-#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-09 14:10:49
+#  ######   #####   ######  #####  ####### ####### # #######  # @Last Modified time: 2015-11-21 15:00:35
 ###############################################################
 
 page:
 	title:
-		BaseUserCompanies: 'Utilisateurs Professionel'
+		BaseUserCompanies: 'Utilisateurs Professionnel'
 		view: '{{url}}'
 		update: '{{url}}'
 
 view:
 	actions:
-		edit: Editer l'utilisateur
+		edit: Editer l'utilisateur professionnel
+		delete: Supprimer l'utilisateur professionnel
